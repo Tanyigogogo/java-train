@@ -78,5 +78,6 @@ public class Homework {
         }
         go2 = go1 / len;
         return go2;
+
     }
 }
