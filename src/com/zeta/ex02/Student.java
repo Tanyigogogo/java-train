@@ -3,14 +3,14 @@ package com.zeta.ex02;
 /**
  * Created by Administrator on 17-1-15.
  */
-public class Homework {
+public class Student {
     private String name;
     private String address;
     private int numCourses;
     private String []courses=new String[30];
     private int []grades=new int[30];
 
-    public Homework(String name,String address){
+    public Student(String name, String address){
         this.name = name;
         this.address = address;
     }
