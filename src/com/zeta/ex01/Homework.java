@@ -15,15 +15,16 @@ public class Homework {
         String arrayString = "";
         arrayString = "{";
         int len = array.length;
-        for (int a= 0;a < len;a++)
-        {
-            if (a == len -1)
-            {
-                arrayString = arrayString + array[a] + "}";
-            }else
-            {
-                arrayString = arrayString + array[a] + ",";
+        if ( len != 0) {
+            for (int a = 0; a < len; a++) {
+                if (a == len - 1) {
+                    arrayString = arrayString + array[a] + "}";
+                } else {
+                    arrayString = arrayString + array[a] + ",";
+                }
             }
+        }else{
+            arrayString = "是不是傻";
         }
         // write your code here
         return arrayString;
@@ -33,15 +34,16 @@ public class Homework {
         String arrayString = "";
         arrayString = "{";
         int len = array.length;
-        for (int a= 0;a < len;a++)
-        {
-            if (a == len -1)
-            {
-                arrayString = arrayString + array[a] + "}";
-            }else
-            {
-                arrayString = arrayString + array[a] + ",";
+        if ( len != 0) {
+            for (int a = 0; a < len; a++) {
+                if (a == len - 1) {
+                    arrayString = arrayString + array[a] + "}";
+                } else {
+                    arrayString = arrayString + array[a] + ",";
+                }
             }
+        }else{
+            arrayString = "是不是傻";
         }
         // write your code here
         return arrayString;
@@ -73,17 +75,25 @@ public class Homework {
     //* 第4题：
     public static boolean equalsArray(int[] array1, int[] array2) {
         boolean equals = false;
-        int len1 = array1.length;
-        int len2 = array2.length;
-        if (len1 == len2){
-            for(int a = 0;a < len1;a++){
-                if (array1[a] != array2[a]){
-                    equals = false;
-                    break;
-                }else{
+        if (array1 != null && array2 != null) {
+            int len1 = array1.length;
+            int len2 = array2.length;
+            if (len1 == len2) {
+                if (len1 == 0) {
                     equals = true;
+                } else {
+                    for (int a = 0; a < len1; a++) {
+                        if (array1[a] != array2[a]) {
+                            equals = false;
+                            break;
+                        } else {
+                            equals = true;
+                        }
+                    }
                 }
             }
+        }else if (array1 == array2){
+            equals = true;
         }
         return equals;
     }
