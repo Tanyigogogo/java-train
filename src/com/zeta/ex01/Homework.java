@@ -9,7 +9,6 @@ import java.util.Arrays;
  * 每一道题的代码提交后都会经过单元测试。
  */
 public class Homework {
-
     //* 第1题：
     public static String arrayToString(int[] array) {
         String arrayString = "";
@@ -29,7 +28,6 @@ public class Homework {
         // write your code here
         return arrayString;
     }
-
     public static String arrayToString(double[] array) {
         String arrayString = "";
         arrayString = "{";
